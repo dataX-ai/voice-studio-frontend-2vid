@@ -1,0 +1,353 @@
+.modelSearch {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.searchContainer {
+  position: fixed;
+  top: 0;
+  left: 60px;
+  right: 0;
+  z-index: 10;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 20px;
+  flex-shrink: 0;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.searchInputContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.modelSearchInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  font-size: 16px;
+  color: #374151;
+  outline: none;
+}
+
+.clearSearch,
+.expandButton,
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.ggufCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.infoIcon {
+  color: #6b7280;
+  cursor: help;
+}
+
+.modelSearchContent {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  height: calc(100% - 60px);
+  margin-top: 65px;
+  padding-top: 20px;
+}
+
+.modelListSection {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+.filterControls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sortSelect {
+  padding: 6px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.downloadBtn {
+  padding: 6px 12px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modelList {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modelListItem {
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modelListItem:hover {
+  background: #f9fafb;
+}
+
+.modelListItem.selected {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.modelListHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.modelIcon {
+  font-size: 24px;
+}
+
+.modelTitle {
+  flex: 1;
+  font-weight: 500;
+}
+
+.modelTag {
+  padding: 4px 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.modelDescription {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+.modelDetailsSection {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 16px;
+}
+
+.staffPickBanner {
+  background: #f3f4f6;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.staffPickBanner h3 {
+  margin: 0 0 8px 0;
+  color: #111827;
+}
+
+.staffPickBanner p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.modelMetadata {
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.metaRow {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metaLabel {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.qwenTag,
+.paramValue {
+  padding: 4px 8px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.statsGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.downloadSection {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.downloadHeader {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.downloadItem {
+  padding: 16px;
+}
+
+.fileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.fileName {
+  font-weight: 500;
+}
+
+.modelName {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.fileActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.copyBtn,
+.likeBtn,
+.actionBtn,
+.expandBtn {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.actionBtn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+}
+
+.actionBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.downloadedBtn {
+  background: #10b981;
+}
+
+.fileSize {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.modelReadme {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+}
+
+.readmeHeader {
+  margin-bottom: 16px;
+}
+
+.readmeHeader h3 {
+  margin: 0 0 4px 0;
+}
+
+.sourceText {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.modelInfo {
+  color: #4b5563;
+}
+
+.modelInfo p {
+  margin: 8px 0;
+}
+
+.loadingMessage,
+.errorMessage {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+.errorMessage {
+  color: #ef4444;
+}
+
+.readmeContent {
+  padding-bottom: 20px;
+} 

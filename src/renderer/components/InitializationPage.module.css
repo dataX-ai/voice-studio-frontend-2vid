@@ -1,0 +1,135 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+.content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.logo {
+    margin-bottom: 2rem;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.status p {
+    color: #374151;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #10b981;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.success p {
+    color: #10b981;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.retryButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+    background-color: #2980b9;
+}
+
+.title {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.successIndicator {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.successIndicator.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.successIndicator svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+} 

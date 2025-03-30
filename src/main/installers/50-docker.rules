@@ -1,0 +1,56 @@
+polkit.addRule(function(action, subject) {
+    // Allow Docker installation and setup operations without password prompt
+    if ((action.id === "org.freedesktop.systemd1.manage-units" ||
+         action.id === "org.freedesktop.systemd1.manage-unit-files" ||
+         action.id === "org.freedesktop.systemd1.reload-daemon" ||
+         action.id.indexOf("org.freedesktop.docker") === 0 ||
+         action.id.indexOf("org.debian.apt") === 0 ||
+         action.id.indexOf("com.ubuntu.pkexec") === 0 ||
+         action.id.indexOf("org.freedesktop.packagekit") === 0) &&
+        subject.local) {
+        return polkit.Result.YES;
+    }
+
+    // Allow all Docker-related operations for users in docker group
+    if (subject.isInGroup("docker")) {
+        if (action.id.indexOf("org.freedesktop.docker") === 0 ||
+            action.id === "org.freedesktop.systemd1.manage-units" ||
+            action.id === "org.freedesktop.systemd1.manage-unit-files" ||
+            action.id === "org.freedesktop.systemd1.reload-daemon") {
+            return polkit.Result.YES;
+        }
+    }
+
+    // Allow Docker service management for users in docker group
+    if ((action.id === "org.freedesktop.systemd1.manage-units" ||
+         action.id === "org.freedesktop.systemd1.manage-unit-files") &&
+        (action.lookup("unit") === "docker.service" ||
+         action.lookup("unit") === "docker.socket") &&
+        subject.isInGroup("docker")) {
+        return polkit.Result.YES;
+    }
+
+    // Allow our installation script to run without password
+    if (action.id === "org.freedesktop.policykit.exec" &&
+        action.lookup("program") !== null &&
+        (action.lookup("program").indexOf("docker_install_linux.sh") !== -1 ||
+         action.lookup("program").indexOf("bash") !== -1) &&
+        subject.local) {
+        return polkit.Result.YES;
+    }
+
+    // Expand package management permissions
+    if (action.id.indexOf("org.debian.apt") === 0 ||
+        action.id.indexOf("com.ubuntu.pkexec") === 0 ||
+        action.id.indexOf("org.freedesktop.packagekit") === 0 ||
+        action.id === "org.freedesktop.policykit.exec") {
+        return polkit.Result.YES;
+    }
+
+    // Allow group management for docker group operations
+    if (action.id === "org.freedesktop.accounts.group-modification") {
+        return polkit.Result.YES;
+    }
+
+    return polkit.Result.NOT_HANDLED;
+}); 

@@ -1,0 +1,239 @@
+.container {
+  padding: 0;
+  margin: 0;
+  background: #f3f4f6;
+  min-height: 100vh;
+  color: #374151;
+  display: flex;
+  flex-direction: column;
+}
+
+.hardwareSection {
+  margin: 0 15px;
+  padding: 15px;
+}
+
+.header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header h1 {
+  font-size: 20px;
+  color: #111827;
+  font-weight: 500;
+  margin: 0;
+}
+
+.header p {
+  color: #6b7280;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.performanceMetrics {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.metricSlider {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+}
+
+.sliderHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-size: 14px;
+}
+
+.metricSlider input[type="range"] {
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  appearance: none;
+}
+
+.metricSlider input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.systemInfo {
+  background: #f3f4f6;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.systemInfoHeader {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.systemInfoHeader h1 {
+  font-size: 20px;
+  color: #111827;
+  font-weight: 500;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  padding: 12px 24px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.actions button {
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actions button:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  margin: 0;
+  background: #f3f4f6;
+  padding: 24px;
+  padding-top: 16px;
+}
+
+.infoCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cardHeader h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.badge {
+  padding: 4px 12px;
+  background: #dcfce7;
+  color: #15803d;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #374151;
+}
+
+.infoRow + .infoRow {
+  margin-top: 8px;
+}
+
+.chip {
+  padding: 4px 12px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #374151;
+}
+
+.chipGroup {
+  display: flex;
+  gap: 8px;
+}
+
+.guardrailSelector {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.selectedGuardrail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.selectedGuardrail p {
+  color: #6b7280;
+  font-size: 12px;
+  margin: 4px 0 0 0;
+}
+
+.monitorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.monitorCard {
+  background: #f9fafb;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #374151;
+} 

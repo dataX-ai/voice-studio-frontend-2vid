@@ -1,0 +1,48 @@
+.comingSoon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f9fafb;
+}
+
+.content {
+  text-align: center;
+  padding: 2rem;
+  max-width: 400px;
+}
+
+.icon {
+  font-size: 4rem;
+  color: #3b82f6;
+  margin-bottom: 1.5rem;
+  animation: bounce 2s infinite;
+}
+
+.content h1 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.content p {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.subtext {
+  font-size: 0.95rem !important;
+  color: #9ca3af !important;
+  margin-bottom: 0 !important;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+} 
